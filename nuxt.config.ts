@@ -52,7 +52,7 @@ export default defineNuxtConfig({
     adminPassword: process.env.NUXT_ADMIN_PASSWORD,
     contactTo: process.env.NUXT_CONTACT_TO,
     public: {
-      enableNewsletter: true,
+      enableNewsletter: false,
     },
   },
 
@@ -64,7 +64,7 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: 'latest',
+  compatibilityDate: '2026-08-21',
 
   // https://hub.nuxt.com/docs/getting-started/installation#options
   hub: {
@@ -107,39 +107,31 @@ export default defineNuxtConfig({
       '@type': 'RealEstateAgent', // Choose from https://schema.org/LocalBusiness#subtypes
 
       logo: '/img/logo.svg',
-      telephone: '+41 78 703 00 33',
-      email: 'info@beatenimmo.ch',
-      areaServed: 'Berner Oberland',
-      sameAs: [
-        'https://www.instagram.com/beatenimmo.ch',
-        'https://www.facebook.com/beatenimmo.ch',
-      ],
+      telephone: '+41 78 711 88 04',
+      email: 'info@prestissimmo.ch',
+      areaServed: 'Jura, Berne',
+      sameAs: ['https://www.facebook.com/people/PrestissIMMO/61580309296481/'],
 
       // Location (Required)
       address: {
-        streetAddress: 'Schmockenstrasse 49',
-        addressLocality: 'Beatenberg',
-        addressRegion: 'BE',
-        postalCode: '3803',
+        streetAddress: 'Rue des Chênes 48M',
+        addressLocality: 'Boécourt',
+        addressRegion: 'JU',
+        postalCode: '2856',
         addressCountry: 'CH',
       },
     }),
   },
 
   i18n: {
-    baseUrl: 'https://beatenimmo.ch',
+    baseUrl: 'https://prestissimmo.ch',
     strategy: 'prefix_except_default',
-    defaultLocale: 'en',
+    defaultLocale: 'fr',
     locales: [
       {
-        code: 'en',
-        language: 'en-US',
-        file: 'en.ts',
-      },
-      {
-        code: 'de',
-        language: 'de-CH',
-        file: 'de.ts',
+        code: 'fr',
+        language: 'fr-CH',
+        file: 'fr.ts',
       },
     ],
   },

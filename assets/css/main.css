@@ -1,18 +1,18 @@
 @import 'tailwindcss' theme(static);
 
 @theme {
-  --color-blue: oklch(39.419% 0.07959 255.38);
-  --color-blue-50: oklch(92.374% 0.02114 227.54);
-  --color-blue-100: oklch(89.335% 0.02957 230.32);
-  --color-blue-200: oklch(82.762% 0.04773 236.54);
-  --color-blue-300: oklch(76.2% 0.06478 239.39);
-  --color-blue-400: oklch(69.415% 0.08262 242.62);
-  --color-blue-500: oklch(62.256% 0.10336 247.42);
-  --color-blue-600: oklch(54.736% 0.10737 250.76);
-  --color-blue-700: oklch(47.104% 0.09329 253.07);
-  --color-blue-800: oklch(39.419% 0.07959 255.38);
-  --color-blue-900: oklch(27.954% 0.05393 257.59);
-  --color-blue-950: oklch(22.036% 0.03771 257.17);
+  --color-blue: #1d525d;
+  --color-blue-50: #f6f8f8;
+  --color-blue-100: #e9f0f1;
+  --color-blue-200: #d4e4e8;
+  --color-blue-300: #b5d7de;
+  --color-blue-400: #87c6d4;
+  --color-blue-500: #54b5ca;
+  --color-blue-600: #3298ae;
+  --color-blue-700: #277687;
+  --color-blue-800: #1d525d;
+  --color-blue-900: #15363d;
+  --color-blue-950: #0e2125;
 
 
   --font-sans: 'Raleway', sans-serif;

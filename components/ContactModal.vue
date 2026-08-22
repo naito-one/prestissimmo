@@ -23,10 +23,10 @@ const emit = defineEmits<{ (e: 'close'): void }>()
       </p>
       <a
         class="font-numbers block w-full py-4 text-center text-xl whitespace-nowrap text-(--ui-secondary) underline"
-        href="tel:+41 78 703 00 33"
+        href="tel:+41 78 711 88 04"
       >
         <UIcon name="i-material-symbols-call" class="size-5 align-middle" />+41
-        78 703 00 33</a
+        78 711 88 04</a
       >
       <p class="my-4 text-center">
         {{ $t('contact.modal.message') }}

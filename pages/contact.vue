@@ -25,14 +25,15 @@ const newsletterModal = overlay.create(NewsletterModal)
     <div class="rounded-xl border border-neutral-200 bg-white p-4">
       <h2 class="mb-4 text-xl font-bold">Impressum</h2>
       <p class="font-numbers mb-4">
-        BeatenIMMO<br />
-        Corinne & Fabrice Winkelmann<br />
-        Schmockenstrasse 49<br />
-        3803 Beatenberg
+        PrestissIMMO<br />
+        Corinne Winkelmann Charmillot<br />
+        Rue des Chênes 48M<br />
+        2856 Boécourt
       </p>
       <p class="font-numbers">
-        info(at)beatenimmo.ch<br />
-        +41 78 703 00 33
+        info(at)prestissimmo.ch<br />
+        +41 78 711 88 04<br />
+        +41 32 426 66 89<br />
       </p>
     </div>
   </div>

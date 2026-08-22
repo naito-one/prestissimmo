@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
   const body = await readBody(event)
   const { email, password } = await readValidatedBody(event, bodySchema.parse)
 
-  if (email === 'info@beatenimmo.ch' && password === adminPassword) {
+  if (email === 'info@prestissimmo.ch' && password === adminPassword) {
     try {
       // set the user session in the cookie
       // this server util is auto-imported by the auth-utils module

@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
   const { contactTo } = useRuntimeConfig()
   const { sendMail } = useNodeMailer()
 
-  const text = `Someone has left a new message on BeatenIMMO!
+  const text = `Someone has left a new message on PrestissIMMO!
 
 Lastname: ${form.lastname.replace('\n', ' ')}
 FirstName: ${form.firstname.replace('\n', ' ')}
@@ -25,11 +25,11 @@ Message
 ${form.message}
 -------
 
-Automatically sent from BeatenIMMO.ch`
+Automatically sent from PrestissIMMO.ch`
 
   try {
     await sendMail({
-      subject: 'New Message on BeatenIMMO',
+      subject: 'New Message on PrestissIMMO',
       text,
       to: contactTo,
     })
