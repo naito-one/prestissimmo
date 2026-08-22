@@ -19,8 +19,8 @@
     {
       "binding": "DB",
       "database_name": "prestissimmo",
-      "database_id": "27060a87-f117-4410-8180-9639097a18c2", // TODO
-      "preview_database_id": "0301684b-4356-40ca-8ed8-d3e8e8ac4680", // TODO
+      "database_id": "ac85fb11-e4e3-4b25-a915-23a08e1ee06c",
+      "preview_database_id": "3864968a-c106-44dd-b539-2d8be8995d38",
       "migrations_table": "_hub_migrations",
       "migrations_dir": ".output/server/db/migrations/sqlite/",
     },
