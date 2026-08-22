@@ -84,10 +84,10 @@
 
       <h3 class="mb-2 font-bold">Une connaissance fine du marché</h3>
       <p class="mb-4">
-        Je vous aide à y voir clair dans les prix, les quartiers, les
-        opportunités. Je connais les spécificités de chaque bien et je vous
-        partage mon regard honnête pour que vous preniez une décision en toute
-        connaissance de cause.
+        Je vous aide à y voir clair dans les prix et les opportunités. Je
+        connais les spécificités de chaque bien et je vous partage mon regard
+        honnête pour que vous preniez une décision en toute connaissance de
+        cause.
       </p>
 
       <h3 class="mb-2 font-bold">Un contact simple et transparent</h3>

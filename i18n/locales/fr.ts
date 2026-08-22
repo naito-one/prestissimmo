@@ -36,7 +36,7 @@ export default {
       numFloors: "Nombre d'étages",
       terrainArea: 'Surface du terrain en mètres carrés',
       livingArea: 'Surface habitable en mètres carrés',
-      livingVolume: 'Volume habitable en mètre cubes',
+      livingVolume: 'Volume habitable en mètres cubes',
       constructionYear: 'Année de construction',
       renovationYear: 'Année de rénovation',
     },
@@ -47,7 +47,7 @@ export default {
       heatingType: 'Type de chauffage',
       address: 'Adresse',
       parking: 'Parking',
-      crushes: 'Charactéristiques uniques',
+      crushes: 'Caractéristiques uniques',
     },
     postMedia: {
       description: 'Description',
@@ -85,8 +85,8 @@ export default {
     modal: {
       call: "Appelez-moi directement afin d'en apprendre plus sur",
       message:
-        'Ou envoyez-moi un message avec votre contact et je reviendrai vers vous aussi tôt que possible !',
-      defaultMessage: "Je souhaiterais plus d'information sur",
+        'Ou envoyez-moi un message avec vos coordonnées et je reviendrai vers vous dès que possible !',
+      defaultMessage: "Je souhaiterais plus d'informations sur",
     },
   },
   newsletter: {
@@ -97,6 +97,6 @@ export default {
   noPosts: {
     title: "Il n'y a rien à afficher pour le moment !",
     description:
-      'Je suis entrain de préparer de nouvelles annonces succulentes pour vous. Revisitez le site sous peu !',
+      'Je suis en train de préparer de nouvelles annonces succulentes pour vous. Revisitez le site sous peu !',
   },
 }
