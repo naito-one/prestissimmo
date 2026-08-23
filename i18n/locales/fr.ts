@@ -99,4 +99,7 @@ export default {
     description:
       'Je suis en train de préparer de nouvelles annonces succulentes pour vous. Revisitez le site sous peu !',
   },
+  validation: {
+    slug: 'Nom unique ne doit contenir que des lettres minuscules, des nombres et des tirets, et ne peut commencer ou finir par un tiret',
+  },
 }
