@@ -1,4 +1,8 @@
 <script setup lang="ts">
+definePageMeta({
+  middleware: 'broken-post-redirect',
+})
+
 import { ContactModal } from '#components'
 import superjson from 'superjson'
 // import { useWindowSize } from 'vue-window-size'
@@ -6,12 +10,12 @@ import superjson from 'superjson'
 
 const route = useRoute()
 const { locale, t } = useI18n()
-const localePath = useLocalePath()
 const toast = useToast()
 // const { width } = useWindowSize()
 // const router = useRouter()
 
 const slug = ref(route.params['slug'])
+// guaranteed to exist with middleware
 const p = await usePost(slug, locale.value)
 const allPosts: Ref<Post[]> = ref([])
 const currentPostIndex = ref(-1)
@@ -29,10 +33,33 @@ function onContact() {
   modal.open({ post: p?.postWriteup?.title ?? 'Unknown' })
 }
 
-// TODO: redirect to 404 or index if p is nullish
-if (!p) {
-  navigateTo(localePath('/404'))
-} else {
+const titleLimit = 35;
+
+useHead({
+  title: (p?.postWriteup.title.length ?? 0) <= titleLimit ? p?.postWriteup.title : `${p?.postWriteup.title.slice(0, titleLimit - 3)}...`,
+  meta: [
+    {
+      name: 'description',
+      content: `${p?.postWriteup.description} - ${p?.postWriteup.address}`,
+    },
+    {
+      name: 'keywords',
+      content: [
+        ...(p?.postWriteup.crushes || []),
+        p?.postWriteup.price,
+        p?.postWriteup.heatingType,
+        p?.post.constructionYear,
+        p?.post.renovationYear,
+        p?.post.livingArea ? `${p?.post.livingArea} m²` : '',
+        p?.post.terrainArea ? `${p?.post.terrainArea} m²` : '',
+      ]
+        .filter(Boolean)
+        .join(', '),
+    },
+  ],
+})
+
+if (p) {
   const type = p.post.type
 
   const { data } = await useFetch(
