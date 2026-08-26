@@ -5,7 +5,7 @@ export default {
   },
   pages: {
     buy: {
-      title: 'Achat',
+      title: 'À vendre',
     },
     rent: {
       title: 'Location',
