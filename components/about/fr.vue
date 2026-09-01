@@ -33,9 +33,9 @@
       </section>
 
       <img
-        class="w-full shrink-0 self-center rounded-xl object-cover object-[50%_45%] sm:h-96 lg:h-auto lg:w-1/3 lg:self-stretch xl:h-96 xl:object-center"
+        class="w-full shrink-0 self-center rounded-xl object-cover object-[45%_25%] sm:h-96 lg:h-auto lg:w-1/3 lg:self-stretch xl:h-96"
         src="/img/corinne.jpg"
-        alt="Corinne"
+        alt="Photo de Corinne Winkelmann, PrestissIMMO"
       />
     </div>
 
