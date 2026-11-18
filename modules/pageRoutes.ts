@@ -21,7 +21,7 @@ function toRouteSources(pages: NuxtPage[], parent = ''): string[] {
 /**
  * Expose a regex source for every page path through the `#page-routes` virtual module
  *
- * Used by server/plugins/notFound.ts to tell page requests from bot probes.
+ * Used by server/utils/pagePath.ts to tell page requests from bot probes.
  */
 export default defineNuxtModule({
   meta: { name: 'page-routes' },

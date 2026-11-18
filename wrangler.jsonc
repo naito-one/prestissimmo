@@ -5,6 +5,8 @@
 
   "vars": {
     "NUXT_CONTACT_TO": "info@beatenimmo.ch",
+    // public custom domain of the beatenimmo R2 bucket
+    "NUXT_PUBLIC_MEDIA_BASE_URL": "https://media.beatenimmo.ch",
   },
 
   "routes": [

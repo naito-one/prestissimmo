@@ -5,6 +5,7 @@ defineProps<{
   postWriteup?: PostWriteup
   banner?: { text: string; class: string } | null
 }>()
+const mediaUrl = useMediaUrl()
 </script>
 <template>
   <div
@@ -16,7 +17,7 @@ defineProps<{
     <div
       v-if="media.pathname"
       class="relative h-0 bg-cover bg-center pb-[100%] md:pb-[75%]"
-      :style="`background-image: url(/media/${media.pathname})`"
+      :style="`background-image: url(${mediaUrl(media.pathname)})`"
       :aria-label="
         media.description?.trim() ||
         postWriteup?.description ||
@@ -31,7 +32,7 @@ defineProps<{
         class="absolute h-full w-full object-cover object-center"
         :key="media.pathname"
       >
-        <source :src="`/media/${media.pathname}`" />
+        <source :src="mediaUrl(media.pathname)" />
       </video>
     </div>
     <!-- skeleton for a media -->

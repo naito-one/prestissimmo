@@ -1,10 +1,6 @@
-import pageRoutes from '#page-routes'
-
 // We answer requests matching no page with a static 404 page, instead of letting Nuxt render its error page.
 // Bots probe hundreds of paths in bursts, and rendering the error page for each one goes over the Workers CPU limit.
 // render:before only runs for requests that no server route handled, so API, media, sitemap and asset routes never reach it.
-
-const PAGE_ROUTES = pageRoutes.map((source) => new RegExp(`^${source}$`))
 
 const NOT_FOUND_HTML = `<!doctype html>
 <html lang="en">
@@ -20,19 +16,6 @@ const NOT_FOUND_HTML = `<!doctype html>
 </body>
 </html>
 `
-
-/**
- * Returns true if the given request path matches a page route
- *
- * The query string, a trailing slash and a trailing /_payload.json are ignored.
- */
-function isPagePath(path: string) {
-  const pathname = path
-    .split('?')[0]!
-    .replace(/\/_payload\.json$/, '')
-    .replace(/(.)\/$/, '$1')
-  return PAGE_ROUTES.some((route) => route.test(pathname))
-}
 
 export default defineNitroPlugin((nitroApp) => {
   nitroApp.hooks.hook('render:before', (ctx) => {

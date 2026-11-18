@@ -25,6 +25,36 @@ export default defineNuxtConfig({
     preference: 'light',
   },
 
+  // we bundle every icon at build time, so the worker never fetches an icon collection at runtime
+  // modules/uiIcons.ts adds the icons Nuxt UI components use
+  icon: {
+    provider: 'none',
+    serverBundle: false,
+    fallbackToApi: false,
+    // Nuxt Icon uses this list to read the collection out of a name like i-material-symbols-gite
+    // without a server bundle, Nuxt Icon doesn't know the installed collections
+    collections: [
+      'bi',
+      'cbi',
+      'circle-flags',
+      'fluent',
+      'lucide',
+      'material-symbols',
+      'mdi',
+      'solar',
+    ],
+    clientBundle: {
+      scan: true,
+      // LanguageSelector.vue builds these names at runtime, so the scan can't see them
+      icons: ['circle-flags:en', 'circle-flags:de'],
+    },
+  },
+
+  // rendering an OG image runs resvg in WASM. It takes far more CPU than the Workers free plan allows per request
+  ogImage: {
+    enabled: false,
+  },
+
   nodemailer: {
     from: 'support@naito.one',
     host: 'mail.infomaniak.com',
@@ -53,6 +83,8 @@ export default defineNuxtConfig({
     contactTo: process.env.NUXT_CONTACT_TO,
     public: {
       enableNewsletter: true,
+      // production serves the R2 bucket from its own domain, so media requests don't invoke the worker
+      mediaBaseUrl: '/media',
     },
   },
 
