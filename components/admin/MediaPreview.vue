@@ -7,6 +7,7 @@ withDefaults(
   { controls: true },
 )
 const { t } = useI18n()
+const mediaUrl = useMediaUrl()
 
 const isVideo = ref(false)
 </script>
@@ -14,7 +15,7 @@ const isVideo = ref(false)
 <template>
   <div
     class="relative h-0 overflow-hidden rounded-md bg-cover bg-center pb-[100%]"
-    :style="`background-image: url(/media/${pathname})`"
+    :style="`background-image: url(${mediaUrl(pathname)})`"
     :aria-label="t('admin.generic.media')"
     aria-roledescription="img"
   >
@@ -26,7 +27,7 @@ const isVideo = ref(false)
       :key="pathname"
       @loadeddata="isVideo = true"
     >
-      <source :src="`/media/${pathname}`" />
+      <source :src="mediaUrl(pathname)" />
     </video>
   </div>
 </template>

@@ -5,6 +5,8 @@
 
   "vars": {
     "NUXT_CONTACT_TO": "info@prestissimmo.ch",
+    // public custom domain of the prestissimmo R2 bucket
+    "NUXT_PUBLIC_MEDIA_BASE_URL": "https://media.prestissimmo.ch",
   },
 
   "routes": [
